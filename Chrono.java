@@ -23,6 +23,14 @@ public class Chrono {
     //  Long Break 
     public static final int START_LONGBREAK = 1;
 
+    //  Configurator
+    public static final int CHANGE_POMODORO = 1;
+    public static final int CHANGE_SHORT_BREAK = 2;
+    public static final int CHANGE_LONG_BREAK = 3;
+    public static final int AUTO_BREAKS = 4;
+    public static final int AUTO_POMODORO = 5;
+    public static final int CANCEL_CONFIG = 6;
+
     public void start() {
         if (!isRunning) {
             startTime = System.currentTimeMillis() - elapsedTime;
@@ -61,7 +69,6 @@ public class Chrono {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Chrono chrono = new Chrono();
         Timers timers = new Timers();
 
         while (true) {
@@ -69,32 +76,22 @@ public class Chrono {
             int indexNumber = Timers.getUserChoice(scanner);
 
             switch (indexNumber) {
-                case POMODORO:
+                case 1:
                     timers.pomodoro();
                     break;
-
-                case LONG_BREAK:
-                    chrono.start();
-                    long longTime = 900; // Define long break time in seconds
-                    try {
-                        for (int i = 0; i < longTime; i++) {
-                            System.out.println("Long Break Timer");
-                            System.out.println("Time transcurred: " + chrono.getStringTime());
-                            Thread.sleep(1000);  // Pause 1 second before new number
-                        }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
-                    chrono.stop();
-                    System.out.println("Final time: " + chrono.getStringTime());
+                case 2:
+                    timers.shortBreak();
                     break;
-
-                case EXIT_PROGRAM:
+                case 3:
+                    timers.longBreak();
+                    break;
+                case 4:
+                    timers.configurator();
+                    break;
+                case 5:
                     System.out.println("Exiting program...");
                     System.exit(0);
                     break;
-
                 default:
                     System.out.println("Invalid option. Please enter a correct number.");
             }

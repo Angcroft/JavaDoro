@@ -20,6 +20,12 @@ public class Interfacer {
         System.out.println("2. Cancel");
     }
 
+    public static void longBreak_ui() {
+        System.out.println("Please select the following options: ");
+        System.out.println("1. Start Long Break");
+        System.out.println("2. Cancel");
+    }
+
     public static void configuration_ui() {
         System.out.println("Please select the following options: ");
         System.out.println("1. Change Pomodoro minutes");
