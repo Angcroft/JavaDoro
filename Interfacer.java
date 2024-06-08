@@ -31,8 +31,6 @@ public class Interfacer {
         System.out.println("1. Change Pomodoro minutes");
         System.out.println("2. Change Short Break minutes");
         System.out.println("3. Change Long Break minutes");
-        System.out.println("4. Auto start breaks");
-        System.out.println("5. Auto start pomodoros");
         System.out.println("6. Cancel");
     }
 }

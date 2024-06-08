@@ -113,20 +113,17 @@ public class Timers {
             case CHANGE_POMODORO:
                 System.out.println("How many minutes will take the Pomodoro?");
                 pomodoroTime = scanner.nextInt() * 60; // Convert to seconds
+                System.out.println("Now it will take " + pomodoroTime + " seconds in pomodoro");
                 break;
             case CHANGE_SHORT_BREAK:
                 System.out.println("How many minutes will take the Short Break?");
                 shortTime = scanner.nextInt() * 60; // Convert to seconds
+                System.out.println("Now it will take " + shortTime + " seconds in short breaks");
                 break;
             case CHANGE_LONG_BREAK:
                 System.out.println("How many minutes will take the Long Break?");
                 longTime = scanner.nextInt() * 60; // Convert to seconds
-                break;
-            case AUTO_BREAKS:
-                System.out.println("Auto breaks configuration not implemented yet.");
-                break;
-            case AUTO_POMODORO:
-                System.out.println("Auto pomodoro configuration not implemented yet.");
+                System.out.println("Now it will take " + longTime + " seconds in long breaks");
                 break;
             case CANCEL_CONFIG:
                 System.out.println("Cancelling configuration");
