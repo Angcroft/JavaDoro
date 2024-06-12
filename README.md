@@ -25,7 +25,7 @@ The project consists of the following files:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/JavaDoro.git
+git clone https://github.com/Angcroft/JavaDoro.git
 ```
 
 2. Navigate to the project directory:
